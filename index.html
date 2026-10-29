@@ -442,7 +442,7 @@ dialog.bio[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
 .eco-card::after{content:"↗";position:absolute;right:16px;top:14px;color:var(--orange);transition:transform .3s}
 .eco-card:hover{transform:translateY(-4px);border-color:var(--orange)}
 .eco-card:hover::after{transform:translate(3px,-3px)}
-.eco-note{margin-top:26px;color:var(--muted);font-size:15px}
+.eco-note{margin-top:26px;color:#c9c3b9;font-size:16px}
 .chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .chips li{border:1px solid var(--line);padding:12px 16px;font-weight:600;font-size:16px;color:var(--cream)}
 .chips-past{margin-top:14px}
@@ -474,6 +474,18 @@ dialog.bio[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
 .faq-i p{padding:0 20px 20px;color:#c9c3b9;max-width:70ch}
 @media (max-width:1000px){.eco-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.eco-grid{grid-template-columns:minmax(0,1fr)}.hero-cta .btn{flex:1 1 100%;justify-content:center}.bf label span{padding:12px 14px}}
+
+.cotiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.lg-more{margin-top:14px}
+.cotile{background:var(--cream);color:var(--ink);padding:22px 18px 16px;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;text-align:center}
+.cotile img{max-height:96px;max-width:82%;width:auto;height:auto;object-fit:contain;margin:auto 0}
+.cotile span{font-size:13px;color:#58544d;line-height:1.35}
+.cotile.gov{background:var(--ink-2);color:var(--cream);border:1px solid var(--line);justify-content:center}
+.cotile.gov b{font:700 22px/1.1 var(--display);color:var(--cream)}
+.cotile.gov span{color:#b9b3a8}
+.eco-logo{display:block;height:34px;width:auto;max-width:150px;object-fit:contain;object-position:left;margin-bottom:6px}
+i.eco-logo.mk{width:120px;height:34px;background:var(--cream);-webkit-mask:var(--m) left center/contain no-repeat;mask:var(--m) left center/contain no-repeat}
+@media (max-width:900px){.cotiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -536,10 +548,10 @@ dialog.bio[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
   <h2 class="rv" id="eco-h">One ecosystem. Companies that work as one.</h2>
   <p class="lead rv">DRP9 Tech sits inside a group of sister companies in the UAE and Portugal. They share owners and partners, and they share teams and projects. When your project needs a brand, a market strategy or an AI product team, it does not need a new vendor.</p>
   <div class="eco-grid">
-    <a class="eco-card rv" href="https://risepersonal.com" target="_blank" rel="noopener"><small>Dubai · UAE</small><h3>Rise Personal</h3><p>Personal branding and human-powered marketing for founders and leaders.</p></a>
-    <a class="eco-card rv" style="--i:1" href="https://bnsights.com" target="_blank" rel="noopener"><small>Dubai · UAE</small><h3>Bnsights</h3><p>Innovation, future foresight and government excellence consulting, with software.</p></a>
-    <a class="eco-card rv" style="--i:2" href="https://imolty.ai" target="_blank" rel="noopener"><small>Lisbon · Portugal</small><h3>Imolty.ai</h3><p>An AI concierge for rental properties, live in Spain and Portugal.</p></a>
-    <a class="eco-card rv" style="--i:3" href="https://uniek.ai" target="_blank" rel="noopener"><small>Lisbon · Portugal</small><h3>Uniek AI</h3><p>An AI product engine that helps startups go from idea to product.</p></a>
+    <a class="eco-card rv" href="https://risepersonal.com" target="_blank" rel="noopener"><img class="eco-logo" src="img/eco-risepersonal.webp" alt="" loading="lazy" width="200" height="60"><small>Dubai · UAE</small><h3>Rise Personal</h3><p>Personal branding and human-powered marketing for founders and leaders.</p></a>
+    <a class="eco-card rv" style="--i:1" href="https://bnsights.com" target="_blank" rel="noopener"><img class="eco-logo" src="img/eco-bnsights.webp" alt="" loading="lazy" width="200" height="50"><small>Dubai · UAE</small><h3>Bnsights</h3><p>Innovation, future foresight and government excellence consulting, with software.</p></a>
+    <a class="eco-card rv" style="--i:2" href="https://imolty.ai" target="_blank" rel="noopener"><i class="eco-logo mk" style="--m:url(img/logo-imolty.webp)" aria-hidden="true"></i><small>Lisbon · Portugal</small><h3>Imolty.ai</h3><p>An AI concierge for rental properties, live in Spain and Portugal.</p></a>
+    <a class="eco-card rv" style="--i:3" href="https://uniek.ai" target="_blank" rel="noopener"><i class="eco-logo mk" style="--m:url(img/logo-uniek.webp)" aria-hidden="true"></i><small>Lisbon · Portugal</small><h3>Uniek AI</h3><p>An AI product engine that helps startups go from idea to product.</p></a>
   </div>
   <p class="eco-note rv">Same people, shared teams, one standard of delivery.</p>
 </section>
@@ -642,7 +654,12 @@ dialog.bio[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
       <div class="lt" role="img" aria-label="DRP9"><i style="--m:url(img/logo-drp9.webp)"></i></div>
   </div>
   <div class="grp">Organisations we have worked with</div>
-  <ul class="chips" aria-label="Organisations we have worked with"><li>PUD Consultants <small>UAE · KSA · Egypt</small></li><li>Sajaya Medical Care <small>KSA · healthcare</small></li><li>Government clients <small>KSA · UAE · confidential: portals, government apps and web apps</small></li></ul>
+  <ul class="cotiles" aria-label="Organisations we have worked with">
+    <li class="cotile"><img src="img/co-hardmission.webp" alt="Hard Mission Construction" loading="lazy" width="120" height="120"><span>Construction</span></li>
+    <li class="cotile"><img src="img/co-pud.webp" alt="PUD Consultants" loading="lazy" width="74" height="120"><span>Urban planning · UAE · KSA · Egypt</span></li>
+    <li class="cotile"><img src="img/co-sajaya.webp" alt="Sajaya Medical Care Services" loading="lazy" width="150" height="120"><span>Healthcare · KSA</span></li>
+    <li class="cotile gov"><b>Government</b><span>KSA · UAE · confidential<br>Portals, government apps and web apps</span></li>
+  </ul>
   <div class="grp">Our group’s past experience</div>
   <div class="lgrid five">
       <div class="lt" role="img" aria-label="BetterUp"><i style="--m:url(img/logo-betterup.webp)"></i></div>
@@ -651,7 +668,10 @@ dialog.bio[open]{animation:pop .45s cubic-bezier(.2,.8,.2,1)}
       <div class="lt" role="img" aria-label="elmenus"><i style="--m:url(img/logo-elmenus.webp)"></i></div>
       <div class="lt" role="img" aria-label="CONNY"><i style="--m:url(img/logo-conny.webp)"></i></div>
   </div>
-  <ul class="chips chips-past" aria-label="More past experience"><li>Cartona <small>Egypt</small></li><li>Octane <small>Egypt</small></li><li>Speakol <small>ad tech</small></li></ul>
+  <div class="lgrid five lg-more">
+      <div class="lt" role="img" aria-label="Octane"><i style="--m:url(img/logo-octane.webp)"></i></div>
+      <div class="lt" role="img" aria-label="Speakol"><i style="--m:url(img/logo-speakol.webp)"></i></div>
+  </div>
  </div>
 </section>
 
